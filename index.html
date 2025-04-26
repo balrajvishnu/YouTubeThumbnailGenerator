@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Thumbnail Generator</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>YouTube Thumbnail Generator</h1>
+        </header>
+        <main>
+            <div class="workspace">
+                <div class="controls-panel">
+                    <section class="upload-section">
+                        <h2>Upload Images</h2>
+                        <div id="uploadArea" class="upload-area">
+                            <input type="file" id="imageUpload" accept="image/*" multiple>
+                            <div class="upload-prompt">
+                                <span>Drop images here or click to upload</span>
+                                <small>Maximum 5 images</small>
+                            </div>
+                        </div>
+                        <div id="uploadedImages" class="uploaded-images"></div>
+                    </section>
+                    <section class="text-section">
+                        <h2>Text Settings</h2>
+                        <div class="text-inputs">
+                            <div class="input-group">
+                                <label for="mainHeadline">Main Title</label>
+                                <input type="text" id="mainHeadline" placeholder="Enter main title">
+                            </div>
+                            <div class="input-group">
+                                <label for="subHeadline">Subtitle</label>
+                                <input type="text" id="subHeadline" placeholder="Enter subtitle (optional)">
+                            </div>
+                        </div>
+                        <div class="text-controls">
+                            <div class="control-group">
+                                <label for="fontSize">Font Size</label>
+                                <div class="range-control">
+                                    <input type="range" id="fontSize" min="20" max="150" value="72" class="slider">
+                                    <span id="fontSizeValue">72px</span>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label for="fontFamily">Font Style</label>
+                                <select id="fontFamily">
+                                    <option value="Inter">Inter</option>
+                                    <option value="Impact">Impact</option>
+                                    <option value="Arial Black">Arial Black</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="layout-controls">
+                        <div class="control-buttons">
+                            <button id="layoutBtn" class="btn layout-btn">
+                                <span>🔄</span> Change Layout
+                            </button>
+                            <button id="colorBtn" class="btn color-btn">
+                                <span>🎨</span> Change Colors
+                            </button>
+                        </div>
+                    </section>
+                    <section class="action-buttons">
+                        <button id="generateBtn" class="btn primary">Generate Thumbnail</button>
+                        <button id="downloadBtn" class="btn secondary" disabled>Download</button>
+                    </section>
+                </div>
+                <div class="preview-panel">
+                    <h2>Preview</h2>
+                    <div class="canvas-container">
+                        <canvas id="thumbnailCanvas" width="1280" height="720"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="copyright">© 2025 Vishnu Balraj. All rights reserved.</p>
+                <p class="privacy-notice">This application processes all data locally in your browser. No personal information is collected or stored.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
