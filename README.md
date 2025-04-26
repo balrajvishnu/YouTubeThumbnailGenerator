@@ -2,6 +2,8 @@
 
 A modern, user-friendly web application for creating custom YouTube thumbnails with multiple images, text overlays, and dynamic layouts.
 
+🌐 **[Try it Live](https://balrajvishnu.github.io/YouTubeThumbnailGenerator/)**
+
 ## Features
 
 - Upload up to 5 images via drag-and-drop or file selection
